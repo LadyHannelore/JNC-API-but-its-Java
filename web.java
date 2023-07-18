@@ -14,8 +14,15 @@ public class web {
     filenamein=scanner.nextLine();
     try {
         filein = new Scanner(new FileReader(filenamein));
+        dotindex = filenamein.lastIndexOf(".");
+        if (dotindex==-1) {
+         filenameout=filenamein+".html";
+        }
+        else {
+         filenameout=filenamein.substring(0, dotindex)+".html";
+        }
     } catch (FileNotFoundException e) {
-       system.out.println("file not found");
+       System.out.println("file not found");
     }
 
     
