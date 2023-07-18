@@ -21,7 +21,7 @@ public class web {
         else {
          filenameout=filenamein.substring(0, dotindex)+".html";
         }
-        fileout= new PrintWriter(filenameout)
+        fileout= new PrintWriter(filenameout);
         try {
          line =filein.nextLine();
          if (line == null) {
